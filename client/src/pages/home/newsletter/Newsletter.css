@@ -1,0 +1,16 @@
+.newsletter-email-input{
+ 
+    border-radius: 25px;
+ 
+ 
+}
+.subscribe-btn{
+    padding:10px 25px;
+    border-radius: 25px;
+    border:0px solid;
+    display:block;
+   
+    color:white;
+    background-color:rgb(194, 43, 43);
+    font-weight: 700;
+}
