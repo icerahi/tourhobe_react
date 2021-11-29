@@ -2,11 +2,11 @@ import React from "react";
 import "./Specialities.css";
 const Specialities = () => {
   return (
-    <div className="container my-5 specialities">
+    <div className="container my-5 specialities" style={{boxShadow:'10px 10px 10px lightgray'}}>
       <hr className="w-50 mx-auto" />
       <div className="row my-5">
         <div className="col-md-6">
-          <img
+          <img style={{boxShadow:'10px 10px 10px lightgray'}}
             className="img-fluid"
             src="https://www.classicjourneys.com/app/uploads/2021/07/21.4.22_blog_Robinson_family_costa_rica_vacation-1-630x352.jpg"
             alt=""
@@ -20,7 +20,7 @@ const Specialities = () => {
             style of travel can change the world – all while showing you an
             incredible time.
           </p>
-          <button className="btn btn-outline-dark py-2 px-3">
+          <button className="btn order-0 btn-outline-dark py-2 px-3">
             Meet our leaders
           </button>
         </div>

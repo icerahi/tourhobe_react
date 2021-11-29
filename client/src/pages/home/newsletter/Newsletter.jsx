@@ -2,8 +2,8 @@ import React from "react";
 import "./Newsletter.css";
 const Newsletter = () => {
   return (
-    <div className="bg-white container-fluid">
-      <div className="mx-auto p-5 text-center">
+    <div className="bg-white container-fluid" style={{boxShadow:'4px 5px 8px lightgray'}}>
+      <div className="mx-auto p-5 text-center" >
         <h5 className="fw-bolder h4 ">
           GET YOUR FREE $250 <br /> TRAVEL CREDIT WHEN YOU SIGN-UP FOR OUR
           NEWSLETTER

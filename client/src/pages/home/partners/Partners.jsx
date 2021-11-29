@@ -2,11 +2,11 @@ import React from "react";
 
 const Partners = () => {
   return (
-    <div className="container my-5">
-      <h2 className="text-center">Our Partners</h2>
-      <hr className="w-50 mx-auto" />
+    <div className="container my-5" >
+      <h2 className="text-center" >Our Partners</h2>
+      <hr className="w-50 mx-auto"  />
 
-      <div className="row text-center">
+      <div className="row text-center" >
         <div className="col-md-3 col-12">
           <img
             className="img-fluid"

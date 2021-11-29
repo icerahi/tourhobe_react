@@ -10,6 +10,7 @@ import NotFound from './pages/notFound/NotFound.jsx'
 import MyBooking from "./pages/mybooking/MyBooking";
 import ManageBooking from "./pages/manageBooking/ManageBooking";
 import AddTrip from "./pages/addTrip/AddTrip";
+import Trips from "./pages/home/trips/Trips";
 function App() {
   return (
     <AuthProvider>
@@ -18,6 +19,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
+          <Route exact path="/trips" component={Trips} />
           <PrivateRoute path="/booking/:id" component={Booking} />
           <PrivateRoute path="/mybooking" component={MyBooking} />
           <PrivateRoute path="/manage" component={ManageBooking} />

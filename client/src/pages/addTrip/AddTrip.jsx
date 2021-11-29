@@ -40,7 +40,7 @@ const AddTrip = () => {
               <input
                 className="form-control mb-2"
                 placeholder="Image URL"
-                type="text"
+                type="url"
                 {...register("image",{required:true})}
               />
               <input

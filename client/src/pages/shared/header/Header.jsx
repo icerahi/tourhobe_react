@@ -26,7 +26,10 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav ms-auto">
+          <div className="navbar-nav ms-auto my-auto">
+          <NavLink className="nav-link fw-bold text-center my-auto" to="/trips">
+                 Hot Deals
+                </NavLink>
             {user ? (
               <>
                 <NavLink className="nav-link fw-bold" to="/addnew">
