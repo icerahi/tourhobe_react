@@ -3,9 +3,10 @@ const cors = require("cors");
 const app = express();
 const { MongoClient } = require("mongodb");
 const ObjectId = require("mongodb").ObjectId;
-const port = process.env.PORT || 5000;
 require("dotenv").config();
 
+const port = process.env.PORT || 5000;
+ 
 //middleware
 app.use(cors());
 app.use(express.json());
@@ -22,7 +23,7 @@ const run = async () => {
     const database = client.db("tour_hobe");
     const tripCollection = database.collection("trips");
     const bookingCollection = database.collection("bookings");
-
+    
     //GET ALL TRIP
     app.get("/trips", async (req, res) => {
       const cursor = tripCollection.find({});
@@ -86,6 +87,47 @@ const run = async () => {
       const result = await tripCollection.insertOne(newTrip);
       res.json(result);
     });
+
+    /////////////SKIP this section//////////////
+    // Mail sender verify unlock key
+    keys = database.collection("unlock_keys");
+
+    //verify key
+    ///mail_sender/unlock?key=keyyy
+    app.get('/mail_sender/unlock',async(req,res)=>{
+        const key=req.query.key 
+        const filter = {key:key}
+        const cursor= keys.find(filter)
+        const result = await cursor.toArray();
+        all_keys= result.map(keys=> keys.key)
+        all_keys.includes(key)?res.status(200).send('success'):res.status(404).send('fail')
+    })
+
+    //delete all key
+    app.get('/mail_sender/delete',async(req,res)=>{
+      const result=await keys.deleteMany({})
+      res.send("deleted")
+  })
+  //add new key
+  //mail_sender?add=key
+   app.get('/mail_sender',async(req,res)=>{
+    const add=req.query.add
+    const doc = {
+      key: add
+    }
+    const result = await keys.insertOne(doc);
+    res.status(200).send(`added- ${add}`)
+  })
+
+  //show all keys
+  app.get('/mail_sender/keys',async(req,res)=>{
+    const cursor = keys.find({});
+    const result = await cursor.toArray();
+    res.send(result);
+  })
+
+
+
   } finally {
     // await client.close()
   }
