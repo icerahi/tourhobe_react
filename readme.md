@@ -36,13 +36,13 @@ You can find and choose flexible trip packages to make your travel Easy, Enjoyab
 Clone the project
 
 ```bash
-  git clone https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-icerahi 
+  git clone https://github.com/icerahi/tourhobe_react.git 
 ```
 
 Go to the project directory
 
 ```bash
-  cd tourism-or-delivery-website-client-side-icerahi 
+  cd tourhobe_react 
 ```
 
 Install dependencies
@@ -72,7 +72,7 @@ You can find and choose flexible trip packages to make your travel Easy, Enjoyab
 
 **Frontend**: [Click](https://trip-hobe.web.app) or visit here: https://trip-hobe.web.app
 
-**Backend**: https://trip-hobe.herokuapp.com
+**Backend**: https://tour-hobe.onrender.com
 ## Backend API Endpoints
 
 - `/trips` [GET] - Get all trips data
@@ -89,13 +89,13 @@ You can find and choose flexible trip packages to make your travel Easy, Enjoyab
 Clone the project
 
 ```bash
-  git clone https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-icerahi
+  git clone https://github.com/icerahi/tourhobe_react.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd tourism-or-delivery-website-server-side-icerahi 
+  cd tourhobe_react 
 ```
 
 Install dependencies
